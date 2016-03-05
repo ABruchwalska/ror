@@ -1,0 +1,13 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+ <p><%= link_to("Dodaj post ", new_post_path) %></p>
+
+<% @posts.each do |post| %>
+
+	<h2> <%= post[:title] %> </h2>
+	<span> <%= post[:date] %> </span>
+	<p> <%= post[:content] %> </p>
+	<p><%= link_to("Edytuj post ", edit_post_path(post)) %></p>
+	<p><%= link_to("Usun post ", post_path(post), {method: :delete}) %></p>
+<% end %>

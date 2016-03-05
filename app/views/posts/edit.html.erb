@@ -1,0 +1,13 @@
+<h1>Posts#edit</h1>
+<p>Find me in app/views/posts/edit.html.erb</p>
+
+    <%= form_for(@post) do |form| %>
+      <p><%= form.label("Tytul") %></p>
+      <p><%= form.text_field("title") %></p>
+      <p><%= form.label("Tresc") %></p>
+      <p><%= form.text_area("content") %></p>
+      <p><%= form.label("Data") %></p>
+      <p><%= form.text_field("date") %></p>
+      <p><%= form.submit %></p>
+    <% end %>
+    <p><%= link_to("Wroc do listy postow ", posts_path) %></p>
